@@ -1,19 +1,33 @@
 # VSR TECHNOLOGIES
 
-**DVMHOST CONFIGURATION**
+**DVMHOST SETUP**
 
 Note: Before beginning install Raspberry Pi OS 32bit Lite (Debian Bookworm)
 
 OS Config
+  - Hostname: VSR
   - User: pi
   - Password: vsr (any password will work here)
-  - Enter WLAN Config
+  - Enter WLAN (wifi) Config
   - Enable SSH
 
-### How to create and load a configuration
-1. SSH into your site `ssh pi@VSR`
-2. Change into the DVM folder `cd /opt/dvm/bin`
+### DVMHOST INSTALL
+1. Open powershell/terminal on your computer and SSH into your site `ssh pi@VSR`
+2. Clone the Repository `git clone https://github.com/DVMProject/dvmhost.git`
+3. Build DVMhost (AFter running `make` it could take up to 30 minutes to install. Do not close the SSH terminal)
+  - `cd dvmhost`
+  - `mkdir build`
+  - `cd build`
+  - `cmake ..`
+  - `make`
+4. Install Binaries
+  - `make strip`
+  - `sudo make old_install`
 
+### How to create and load a configuration
+1. Open powershell/terminal on your computer and SSH into your site `ssh pi@VSR`
+2. Change into the DVM folder `cd /opt/dvm/bin`
+3. Creating the configs
 - a. Convetional/DVRS/VOC Trunking
   - create the file `sudo nano config.yml`
   - paste your config by right clicking your cursor 
@@ -28,6 +42,6 @@ OS Config
   - Press CTRL+X, Y, Enter
 
 ### Starting your site
-1. SSH into your site `ssh pi@VSR`
-2. Run your start command `sh VSRBOOT.sh`
+1. Open powershell/terminal on your computer and SSH into your site `ssh pi@VSR`
+2. Run your start command `sh VSRBOOT.sh` OR `sh VSRBOOT2.sh` for trunking
 3. You may either close the terminal or leave it open
