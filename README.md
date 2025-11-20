@@ -20,8 +20,9 @@ OS Config
   paste your config by right clicking your cursor
    
   CTRL+X, Y, Enter
-   
+``
   b. Trunking
+  
   create your CC file `sudo nano CC.yml`
 
   paste your CC config by right clicking your cursor
