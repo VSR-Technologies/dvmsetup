@@ -22,6 +22,8 @@ OS Config
   - `make`
 4. Install Binaries
   - `make strip`
+  - `make tarball`
+  - `sudo tar xvzf dvmhost_R04Gxx_<arch>.tar.gz -C /opt`
   - `sudo make old_install`
 
 ### How to create and load a configuration
