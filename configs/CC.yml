@@ -46,7 +46,7 @@ protocols:
         dumpDataPacket: false
         repeatDataPacket: true
         dumpTsbkData: false
-        callHang: 5
+        callHang: 2
         noStatusAck: false
         noMessageAck: true
         unitToUnitAvailCheck: true
