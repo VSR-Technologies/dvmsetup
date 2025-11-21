@@ -14,7 +14,20 @@ OS Config
   - Enter WLAN (wifi) Config
   - Enable SSH
 
-### DVMHOST INSTALL
+### Auto Install
+
+You can automatically install DVMhost and the systemctl services by running the commands below
+
+1. SSH IN A TERMINAL FIRST! `ssh pi@vsr`
+2. Clone the Repository `git clone https://github.com/VSR-Technologies/dvmsetup.git`
+3. Change to the directory `cd dvmsetup`
+
+- Conventional/DVRS/VOC `sudo sh VSRbasicsetup.sh`
+- Trunking `sudo sh VSRsetup.sh`
+
+Your site will say "INSTALL SUCCESS" and reboot when finished.
+
+### MANUAL DVMHOST INSTALL
 1. Open powershell/terminal on your computer and SSH into your site `ssh pi@VSR`
 2. Clone the Repository `git clone https://github.com/DVMProject/dvmhost.git`
 3. Build DVMhost (AFter running `make` it could take up to 30 minutes to install. Do not close the SSH terminal)
@@ -33,7 +46,7 @@ OS Config
 1. Open powershell/terminal on your computer and SSH into your site `ssh pi@VSR`
 2. Change into the DVM folder `cd /opt/dvm/bin`
 3. Creating the configs
-- a. Convetional/DVRS/VOC Trunking
+- a. Conventional/DVRS/VOC Trunking
   - create the file `sudo nano config.yml`
   - paste your config by right clicking your cursor 
   - Press CTRL+X, Y, Enter
@@ -46,7 +59,27 @@ OS Config
   - paste your VC config by right clicking your cursor
   - Press CTRL+X, Y, Enter
 
-### Starting your site
+### Manually Enabling your site
+1. Open powershell/terminal on your computer and SSH into your site `ssh pi@VSR`
+2. Clone the DVMsystemd repository `git clone https://github.com/VSR-Technologies/DVMsystemd.git`
+3. Change to the directory `cd DVMsystemd` and `cd systemctl`
+4. Enable the systemd service
+- a. Conventional/DVRS/VOC Trunking
+  - Move the service to systemctl `sudo mv ./P25.service /usr/bin/systemctl`
+  - Return to /home/pi `cd`
+  - Enable the service `sudo systemctl enable P25.service`
+  - Reboot the system `sudo reboot`
+  - Your site will now automatically boot when the site is powered on
+
+- b. Trunking
+  - Move the Control Channel service to systemctl `sudo mv ./cc.service /usr/bin/systemctl`
+  - Move the Voice Channel service to systemctl `sudo mv ./vc.service /usr/bin/systemctl`
+  - Enable Control Channel service `sudo systemctl enable cc.service`
+  - Enable Voice Channel service `sudo systemctl enable vc.service`
+  - Reboot the system `sudo reboot`
+  - Your site will now automatically boot when the site is powered on
+
+### (LEGACY) Booting your site with bootscripts
 1. Open powershell/terminal on your computer and SSH into your site `ssh pi@VSR`
 2. Run your start command `sh VSRBOOT.sh` OR `sh VSRBOOT2.sh` for trunking
 3. You may either close the terminal or leave it open
