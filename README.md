@@ -72,7 +72,7 @@ Your site will say "INSTALL SUCCESS" and reboot when finished.
   - Your site will now automatically boot when the site is powered on
 
 - b. Trunking
-  - Move the Control Channel service to systemctl `sudo mv ./cc.service /etc/systemd/systeml`
+  - Move the Control Channel service to systemctl `sudo mv ./cc.service /etc/systemd/system`
   - Move the Voice Channel service to systemctl `sudo mv ./vc.service /etc/systemd/system`
   - Enable Control Channel service `sudo systemctl enable cc.service`
   - Enable Voice Channel service `sudo systemctl enable vc.service`
