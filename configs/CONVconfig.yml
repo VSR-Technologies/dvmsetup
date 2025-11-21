@@ -80,6 +80,8 @@ system:
         supervisor: true
         channelId: 0
         channelNo: CHNO
+        voiceChNo:
+            - channelNo: CHNO
         nac: 69D
         ran: 1
         pSuperGroup: 0100
@@ -88,6 +90,7 @@ system:
         sysId: 69D
         rfssId: 1
         siteId: SITEID
+        
     modem:
         protocol:
             type: "uart"
