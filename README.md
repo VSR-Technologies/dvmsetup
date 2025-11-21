@@ -65,15 +65,15 @@ Your site will say "INSTALL SUCCESS" and reboot when finished.
 3. Change to the directory `cd DVMsystemd` and `cd systemctl`
 4. Enable the systemd service
 - a. Conventional/DVRS/VOC Trunking
-  - Move the service to systemctl `sudo mv ./P25.service /usr/bin/systemctl`
+  - Move the service to systemctl `sudo mv ./P25.service /etc/systemd/system`
   - Return to /home/pi `cd`
   - Enable the service `sudo systemctl enable P25.service`
   - Reboot the system `sudo reboot`
   - Your site will now automatically boot when the site is powered on
 
 - b. Trunking
-  - Move the Control Channel service to systemctl `sudo mv ./cc.service /usr/bin/systemctl`
-  - Move the Voice Channel service to systemctl `sudo mv ./vc.service /usr/bin/systemctl`
+  - Move the Control Channel service to systemctl `sudo mv ./cc.service /etc/systemd/systeml`
+  - Move the Voice Channel service to systemctl `sudo mv ./vc.service /etc/systemd/system`
   - Enable Control Channel service `sudo systemctl enable cc.service`
   - Enable Voice Channel service `sudo systemctl enable vc.service`
   - Reboot the system `sudo reboot`
