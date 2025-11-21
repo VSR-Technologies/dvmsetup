@@ -1,0 +1,12 @@
+[Unit]
+Description=VSR Technologies P25
+After=syslog.target zerotier-one.service network.target
+
+[Service]
+User=root
+Type=forking
+ExecStart=/opt/dvm/bin/dvmhost -c /opt/dvm/bin/config.yml
+Restart=on-abnormal
+
+[Install]
+WantedBy=multi-user.target
