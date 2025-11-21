@@ -1,3 +1,4 @@
+# all directories
 bootscripts/
 configs/
-tables/
+*.md
