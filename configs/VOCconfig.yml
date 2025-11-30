@@ -145,8 +145,8 @@ system:
     radio_id:
         file: /opt/dvm/bin/rid_acl.dat
         time: 2
-        acl: true
+        acl: false
     talkgroup_id:
         file: /opt/dvm/bin/tg_acl.yml
         time: 2
-        acl: true
+        acl: false
