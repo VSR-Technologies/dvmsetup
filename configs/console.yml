@@ -1,6 +1,7 @@
+keyFile: "C:/path/to/keyfile/keys.clear"
 systems:
   - name: "VSR"
-    identity: "ALIAS"
+    identity: "ALIAS CONSOLE"
     address: "163.123.236.39"
     port: 62031
     peerId: PEERID
@@ -26,6 +27,13 @@ zones:
         algo: "none"
         mode: "p25"
 
+      - name: "VSR Ops 2"
+        system: "VSR"
+        tgid: "9003"
+        keyId: 46
+        algo: "arc4"
+        mode: "p25"
+
       - name: "VSR Dispatch"
         system: "VSR"
         tgid: "502"
@@ -36,6 +44,6 @@ zones:
       - name: "Tactical 1"
         system: "VSR"
         tgid: "503"
-        keyId: 0
-        algo: "none"
+        keyId: 45
+        algo: "aes"
         mode: "p25"
