@@ -1,6 +1,6 @@
 systems:
   - name: "VSR"
-    identity: "CAPTAINJAMES CONSOLE"
+    identity: "ALIAS"
     address: "163.123.236.39"
     port: 62031
     peerId: PEERID
