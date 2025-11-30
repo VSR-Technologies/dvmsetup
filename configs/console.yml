@@ -1,0 +1,41 @@
+systems:
+  - name: "VSR"
+    identity: "CAPTAINJAMES CONSOLE"
+    address: "163.123.236.39"
+    port: 62031
+    peerId: PEERID
+    rid: "RID"
+    password: "FNEPW"
+    encrypted: false
+    presharedKey: "000102030405060708090A0B0C0D0E0F000102030405060708090A0B0C0D0E0F"
+
+zones:
+  - name: "Zone 1"
+    channels:
+      - name: "VSR Primary"
+        system: "VSR"
+        tgid: "9001"
+        keyId: 0
+        algo: "none"
+        mode: "p25"
+
+      - name: "VSR Ops 1"
+        system: "VSR"
+        tgid: "9002"
+        keyId: 0
+        algo: "none"
+        mode: "p25"
+
+      - name: "VSR Dispatch"
+        system: "VSR"
+        tgid: "502"
+        keyId: 0
+        algo: "none"
+        mode: "p25"
+
+      - name: "Tactical 1"
+        system: "VSR"
+        tgid: "503"
+        keyId: 0
+        algo: "none"
+        mode: "p25"
