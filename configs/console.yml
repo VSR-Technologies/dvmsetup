@@ -1,4 +1,3 @@
-keyFile: "C:/path/to/keyfile/keys.clear"
 systems:
   - name: "VSR"
     identity: "ALIAS CONSOLE"
@@ -27,13 +26,6 @@ zones:
         algo: "none"
         mode: "p25"
 
-      - name: "VSR Ops 2"
-        system: "VSR"
-        tgid: "9003"
-        keyId: 46
-        algo: "arc4"
-        mode: "p25"
-
       - name: "VSR Dispatch"
         system: "VSR"
         tgid: "502"
@@ -41,9 +33,23 @@ zones:
         algo: "none"
         mode: "p25"
 
-      - name: "Tactical 1"
+      - name: "Fire Dispatch"
         system: "VSR"
-        tgid: "503"
-        keyId: 45
-        algo: "aes"
+        tgid: "1501"
+        keyId: 0
+        algo: "none"
+        mode: "p25"
+
+      - name: "Fireground"
+        system: "VSR"
+        tgid: "1502"
+        keyId: 0
+        algo: "none"
+        mode: "p25"
+
+      - name: "Police Dispatch"
+        system: "VSR"
+        tgid: "1503"
+        keyId: 0
+        algo: "none"
         mode: "p25"
